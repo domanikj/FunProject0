@@ -15,11 +15,12 @@ namespace Shelter
             names.Add("Lavon");
             names.Add("Gerald");
 
+            var result = names.Where(s => s.Contains("a"));
             var res = from name in names
                       where name.Contains("D")
                       select name;
 
-            foreach(var nam in res)
+            foreach(var nam in result)
             {
                 Console.WriteLine(nam);
             }

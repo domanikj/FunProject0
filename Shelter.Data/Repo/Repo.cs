@@ -7,7 +7,7 @@ namespace Shelter.Data.Repo
     {
         public Repo()
         {
-           ggdsd
+
         }
     }
 }

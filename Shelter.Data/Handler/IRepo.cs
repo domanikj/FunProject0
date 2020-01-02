@@ -4,7 +4,6 @@ namespace Shelter.Data.Handler
     public interface IRepo
     {
 
-       void AdoptMenu();
 
 
     }

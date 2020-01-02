@@ -29,7 +29,6 @@ namespace Shelter
                 {
                     case 1:
                 CustomerMenu:
-
                         // Calling customer menu
                         _repo.AdoptCustMenu();
                         try
@@ -40,7 +39,11 @@ namespace Shelter
                            // Decision for choice of user
                             if (int.Parse(pic1) == 1)
                             {
+
+
+
                                 Console.WriteLine("PICK1");
+
                             }
                             else if (int.Parse(pic1) == 2)
                             {
@@ -67,15 +70,14 @@ namespace Shelter
                             {
                                 goto Menu;
                             }
-
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Numbers Only! Try again\n");
                             goto AdminMenu;
-    
                         }
                         break;
+
                     default:
                         Console.WriteLine("Incorrect input please try again");
                         break;

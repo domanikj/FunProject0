@@ -15,6 +15,7 @@ namespace Shelter
         {
             Log.Logger = new LoggerConfiguration()
                          .WriteTo.Console()
+                         .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
                          .CreateLogger();
 
             Log.Information("Hello again, Serilog!");

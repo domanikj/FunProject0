@@ -4,13 +4,20 @@ using System.Linq;
 using Shelter.Data.Repo;
 using Shelter.Data.Handler;
 using Shelter.Data.Classes;
+using Serilog;
 
 namespace Shelter
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                         .WriteTo.Console()
+                         .CreateLogger();
+
+            Log.Information("Hello again, Serilog!");
             //List to hold customers
             List<Customer> cust = new List<Customer>();
           
@@ -24,6 +31,7 @@ namespace Shelter
             Menu:
                 // Calling function from Repo class
                 _repo.AdoptMenu();
+
                 // String to keep track of answers
                 string ans = Console.ReadLine();
 
@@ -49,17 +57,13 @@ namespace Shelter
                                 // Calling function to add to cust list
                                 _repo.AddCustomer(cus, cust);
 
+                                Console.WriteLine($"Hello, {cus.Firstname}! Pleas select option"); 
+
+
                               
                               
 
-                                
-
-
-
-
-
-
-
+                             
                             }
                             else if (int.Parse(pic1) == 2)
                             {

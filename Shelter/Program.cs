@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using Shelter.Data.Repo;
 using Shelter.Data.Handler;
+using Shelter.Data.Classes;
+
 namespace Shelter
 {
     class Program
     {
         static void Main(string[] args)
         {
+            //List to hold customers
+            List<Customer> cust = new List<Customer>();
+          
             // Instance or Repo
             Repo _repo = new Repo();
 
@@ -39,10 +44,21 @@ namespace Shelter
                            // Decision for choice of user
                             if (int.Parse(pic1) == 1)
                             {
+                                // Inst new Customer Object
+                                var cus = new Customer();
+                                // Calling function to add to cust list
+                                _repo.AddCustomer(cus, cust);
+
+                              
+                              
+
+                                
 
 
 
-                                Console.WriteLine("PICK1");
+
+
+
 
                             }
                             else if (int.Parse(pic1) == 2)

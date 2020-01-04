@@ -58,15 +58,12 @@ namespace Shelter
                                 // Calling function to add to cust list
                                 _repo.AddCustomer(cus, cust);
 
-                                Console.WriteLine($"Hello, {cus.Firstname}! Pleas select option"); 
-
-
-                              
-                              
-
-                             
+                                Console.WriteLine($"Hello, {cus.Firstname}! Please sign in with details\n");
+                                Console.Clear();
+                                goto CustomerMenu;
+           
                             }
-                            else if (int.Parse(pic1) == 2)
+                            else if (int.Parse(pic1) == 3)
                             {
                                 goto Menu;
                             }
